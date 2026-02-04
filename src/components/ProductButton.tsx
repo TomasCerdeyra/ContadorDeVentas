@@ -28,20 +28,10 @@ function getContrastColor(hexColor: string): string {
 export function ProductButton({ product, count, onTap }: ProductButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   
-  const handleTap = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+  const handlePointerDown = useCallback((e: React.PointerEvent) => {
+    // Prevent default behavior to ensure clean event handling
     e.preventDefault();
-    
-    let clientX: number, clientY: number;
-    
-    if ('touches' in e) {
-      clientX = e.touches[0].clientX;
-      clientY = e.touches[0].clientY;
-    } else {
-      clientX = e.clientX;
-      clientY = e.clientY;
-    }
-    
-    onTap(product.id, clientX, clientY);
+    onTap(product.id, e.clientX, e.clientY);
   }, [product.id, onTap]);
 
   const textColor = getContrastColor(product.color);
@@ -49,15 +39,14 @@ export function ProductButton({ product, count, onTap }: ProductButtonProps) {
   return (
     <motion.button
       ref={buttonRef}
-      className="relative flex flex-col items-center justify-center w-full h-full select-none touch-manipulation overflow-hidden"
+      className="relative flex flex-col items-center justify-center w-full h-full select-none touch-none overflow-hidden"
       style={{ 
         backgroundColor: product.color,
         WebkitTapHighlightColor: 'transparent',
       }}
       whileTap={{ scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-      onTouchStart={handleTap}
-      onMouseDown={handleTap}
+      onPointerDown={handlePointerDown}
     >
       {/* Product Name */}
       <span 
