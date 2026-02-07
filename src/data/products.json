@@ -1,10 +1,10 @@
 [
-  { "id": 1, "name": "VODKA + SPEED", "color": "#8B5CF6" },
-  { "id": 2, "name": "FERNET + COCA", "color": "#10B981" },
-  { "id": 3, "name": "CERVEZA", "color": "#F59E0B" },
-  { "id": 4, "name": "GIN + TONIC", "color": "#3B82F6" },
-  { "id": 5, "name": "CHAMPAGNE", "color": "#EC4899" },
-  { "id": 6, "name": "WHISKY", "color": "#EF4444" },
-  { "id": 7, "name": "APEROL SPRITZ", "color": "#F97316" },
-  { "id": 8, "name": "AGUA / GASEOSA", "color": "#06B6D4" }
+  { "id": 1, "name": "2x1 Power", "color": "#8B5CF6" },
+  { "id": 2, "name": "Vodka + Speed", "color": "#10B981" },
+  { "id": 3, "name": "Fernet + coca", "color": "#F59E0B" },
+  { "id": 4, "name": "Gin Gordon", "color": "#3B82F6" },
+  { "id": 5, "name": "Jagger + Speed", "color": "#EC4899" },
+  { "id": 6, "name": "Absolute + Speed", "color": "#EF4444" },
+  { "id": 7, "name": "Renasence", "color": "#F97316" },
+  { "id": 8, "name": "Speed", "color": "#06B6D4" }
 ]
